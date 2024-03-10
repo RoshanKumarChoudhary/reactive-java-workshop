@@ -48,6 +48,10 @@ public class Exercise1 {
                 .map(user -> user.getFirstName())
                 .forEach(System.out::println);
 
+        intNumbersStream().flatMap(integer -> userStream().filter(user -> user.getId() == integer))
+                .map(user -> user.getFirstName())
+                .forEach(System.out::println);
+
     }
 
 }
